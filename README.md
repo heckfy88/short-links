@@ -29,7 +29,7 @@
 Пример ответа: 
 ```json
 {
-  "ownerUid": "e6690715-d3eb-458f-96df-68448fe9f4ca",
+  "ownerUid": "cc01c8ed-a6e8-466d-b578-9f2be9a1c9b2",
   "shortUrl": "www.leenk.com/myO4z",
   "expirationDateTime": "2025-01-08T06:30:35.444711"
 }
