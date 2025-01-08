@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: short-links
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+  liquibase:
+    user: test
+    password: test
+    change-log: classpath:db/changelog/db.changelog-master.xml
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+
+link:
+  duration: 60 # in minutes
+  algorithm:
+    prefix: www.leenk.com/
+    length: 5
+    chars:
+      letters: true
+      numbers: false
