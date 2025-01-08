@@ -25,7 +25,7 @@ public class AdviceController {
     }
 
     @ExceptionHandler(value = {LinkNotFound.class})
-    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public ErrorMessage linkNotFoundException(LinkNotFound ex, WebRequest request) {
         return new ErrorMessage(
                 HttpStatus.NOT_FOUND,
