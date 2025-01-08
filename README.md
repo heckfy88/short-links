@@ -123,7 +123,7 @@ link:
 ### Модель данных 
 Исходное состояние БД задается с помощью скрипта liquibase [db.changelog-master.xml](src/main/resources/db/changelog/db.changelog-master.xml)
 
-```postgresql
+```sql
 create extension if not exists "uuid-ossp";
 
 create table link(
