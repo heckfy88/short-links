@@ -1,4 +1,11 @@
 package sf.shortlinks.api.exception;
 
-public class LinkNotFound {
+import lombok.Getter;
+
+@Getter
+public class LinkNotFound extends RuntimeException {
+
+    public LinkNotFound(String message, String shortUrl) {
+        super(message + shortUrl);
+    }
 }

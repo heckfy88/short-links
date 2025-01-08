@@ -4,14 +4,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.UUID;
 
-public record CreateLinkDto(
+public record CreateLinkRqDto(
         @JsonProperty("url")
         String url,
-        @JsonProperty("shortUrl")
-        String shortUrl,
         @JsonProperty("ownerUid")
         UUID ownerUid,
         @JsonProperty("duration")
-        int duration
+        Integer duration,
+        @JsonProperty("limit")
+        Integer limit
 ) {
 }

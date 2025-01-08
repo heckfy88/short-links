@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: short-links
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    default-schema: public
+  scheduling:
+    enabled: true
+    cron: 0 0 0 * * *
+
+
+link:
+  duration: 120 # in minutes
+  limit: 5
+  algorithm:
+    prefix: www.leenk.com/
+    length: 5
+    chars:
+      letters: true
+      numbers: true

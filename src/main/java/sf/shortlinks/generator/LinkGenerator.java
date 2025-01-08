@@ -1,15 +1,14 @@
-package sf.shortlinks.utils;
+package sf.shortlinks.generator;
 
-import lombok.experimental.UtilityClass;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
-//@UtilityClass
 @Component
-public class LinkUtils {
+public class LinkGenerator {
     @Value("${link.algorithm.prefix:leenk.com/}")
     private String prefix;
 
@@ -24,7 +23,7 @@ public class LinkUtils {
 
     public String generateShortUrl() {
         return prefix + RandomStringUtils.random(
-                length, 0, length-1,
+                length, 0, 0,
                 letters, numbers,
                 null, // RandomStringUtils.ALPHANUMERICAL_CHARS
                 new Random());

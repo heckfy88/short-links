@@ -1,24 +1,24 @@
 spring:
-  profiles:
-    active: test
   application:
     name: short-links
   datasource:
-    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:postgresql://localhost:5432/short-links
+    username:
+    password:
+    driver-class-name: org.postgresql.Driver
   liquibase:
-    user: test
-    password: test
     change-log: classpath:db/changelog/db.changelog-master.xml
-  jpa:
-    hibernate:
-      ddl-auto: none
+  scheduling:
+    enabled: false
+    cron: 0 0 0 * * *
 
 
 link:
-  duration: 60 # in minutes
+  duration: 120 # in minutes
+  limit: 5
   algorithm:
     prefix: www.leenk.com/
     length: 5
     chars:
       letters: true
-      numbers: false
+      numbers: true
