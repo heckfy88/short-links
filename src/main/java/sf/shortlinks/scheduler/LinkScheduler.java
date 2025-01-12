@@ -20,7 +20,7 @@ public class LinkScheduler {
 
     @Scheduled(cron = "${spring.scheduling.cron:0 0 0 * * *}")
     public void removeInactiveLinks() {
-        logger.info("Removing inactives links");
+        logger.info("Removing inactive links");
         linkRepository.deleteExpiredOrInactiveLinks();
     }
 }
